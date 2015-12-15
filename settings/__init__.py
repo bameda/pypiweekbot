@@ -10,7 +10,7 @@ ACCESS_SECRET = getattr(local, 'ACCESS_SECRET', 'undefined')
 CONSUMER_KEY = getattr(local, 'CONSUMER_KEY', 'undefined')
 CONSUMER_SECRET = getattr(local, 'CONSUMER_SECRET', 'undefined')
 
-USER_BACK_LIST = getattr(local, 'USER_BACK_LIST', [])
-WORD_BLACK_LIST = getattr(local, 'WORD_BLACK_LIST', [])
+USER_BLACKLIST = getattr(local, 'USER_BLACKLIST', [])
+WORD_BLACKLIST = getattr(local, 'WORD_BLACKLIST', [])
 
 SEARCH_QUERY = getattr(local, 'SEARCH_QUERY', '#piweek')
