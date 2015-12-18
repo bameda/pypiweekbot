@@ -3,7 +3,9 @@ import sys
 try:
     from . import local
 except ImportError:
-    sys.exit("Error: create settings file")
+    local = {}
+    print('No "settings/local.py" file found.', file=sys.stderr)
+
 
 ACCESS_TOKEN = getattr(local, 'ACCESS_TOKEN', 'undefined')
 ACCESS_SECRET = getattr(local, 'ACCESS_SECRET', 'undefined')

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import click, tweepy, hashlib, os
+import click, tweepy, hashlib, os, sys
 
 import settings
 
@@ -35,6 +35,14 @@ def cli(access_token, access_secret, consumer_key, consumer_secret,
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)
     api = tweepy.API(auth)
+
+    try:
+        api.verify_credentials()
+    except tweepy.error.TweepError:
+        sys.exit('Error: Invalid credentials.\n'
+                 '       Use config file, env vars or command options.\n'
+                 '       Check if consumer_key, consumer_secret, access_token and access_secret are valid.')
+
 
     # retrieve last savepoint if available
     try:
