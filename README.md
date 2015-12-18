@@ -1,22 +1,22 @@
-# pypiweekbot
+# pyticli
 
-A twitter bot for the @\_piweek\_ account
+A twitter bot (initially for @\_piweek\_ account).
 
 
 ## Setup
 
 ```
-mkvirtualenv -p /usr/bin/python3 pypiweekbot
-workon pypiweekbot
+mkvirtualenv -p /usr/bin/python3 pyticli
+workon pyticli
 pip install -r requirements.txt
 ```
 
 ## Usage
 
 ```bash
-$ ./pypiweekbot --help
+$ ./pyticli --help
 
-Usage: pypiweekbot [OPTIONS]
+Usage: pyticli [OPTIONS]
 
   I'm a Twitter bot and I know how to do retweets.
 
